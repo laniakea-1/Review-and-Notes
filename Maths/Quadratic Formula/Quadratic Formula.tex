@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\usepackage[margin=2cm]{geometry}
+
+\title{Quadratic Formula}
+
+\begin{document}
+	\maketitle
+	
+	\Large
+	\section*{Introduction}
+	When considering functions of the form
+	\[f(x) = ax^2+bx+c\]
+	for real constants $a, b, c$ where $a \neq 0$, it is often important to find the points at which $f(x)=0$; that is to say, the \textit{solutions} or \textit{roots} to the equation
+	\[ax^2+bx+c=0\]
+	Naturally, in many cases, we could just use factoring or some similar technique, but such methods are not guaranteed to work in all cases. What we want is something that is guaranteed to work, every single time.
+	
+	Of course, I could just give you a formula, but that doesn't give much insight or fun (though, if you find yourself in a rush, feel free to skip ahead to that). Let's see if we 
+	
+	On its own, this might look tricky. However, there is a nice case in which this is easily solved: if $b=0$, then we have
+	\[ax^2+c=0\]
+	\[x^2 = -\frac{c}{a}\]
+	\[x=\pm \sqrt{\frac{c}{a}}\]
+	
+	Maybe we can exploit this structure by turning the $ax^2+bx+c$ as a whole into something plus a constant. If we look closely, we can do so quite easily, by completing the square (see the Techniques folder)!
+	
+	Let's divide by $a$ first to get rid of the pesky coefficient on the $x^2$ term:
+	\[x^2+\frac{b}{a}x+\frac{c}{a}=0\]
+	
+	Then, completing the square:
+	\[x^2+\frac{b}{a}x+\frac{c}{a} = \left[x^2 + \frac{b}{a}x + \left(\frac{b}{2a}\right)^2\right] + \frac{c}{a} - \left( \frac{b}{2a} \right)^2\]
+	\[= \left( x+\frac{b}{2a} \right)^2 + \frac{c}{a} - \frac{b^2}{4a^2} = 0\]
+	We can now move things over and combine the constant terms to yield
+	\[\left( x + \frac{b}{2a} \right)^2 = \frac{b^2}{4a^2}-\frac{c}{a} = \frac{b^2-4ac}{4a^2}\]
+	Of course, we can now take the square root to start ``unlocking" our $x$ (don't forget to include both the positive \textit{and} negative roots!). This tells us that
+	\[x+\frac{b}{2a} = \pm \sqrt{\frac{b^2-4ac}{4a^2}} = \pm \frac{\sqrt{b^2-4ac}}{2a}\]
+	Finally, moving the $\frac{b}{2a}$ over the left-hand side to isolate our $x$, we get
+	\[x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\]
+	-- this is, in its full glory, the famous Quadratic Formula! Memorise it (if you find this difficult, there are some fun YouTube videos with songs, mnemonics and suchlike to help you remember) and understand it --- it forms an integral part of the SAT and is one of the most commonly-used tools in high-school mathematics.
+	
+	\section*{The Discriminant}
+	\[\Delta := b^2-4ac\]
+	-- This is to be finished later!
+\end{document}
