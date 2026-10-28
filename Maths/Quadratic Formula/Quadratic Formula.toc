@@ -1,0 +1,2 @@
+\contentsline {section}{Introduction}{2}{}%
+\contentsline {section}{The Discriminant}{3}{}%

@@ -1,13 +1,20 @@
 \documentclass{article}
 
 \usepackage[margin=2cm]{geometry}
+\usepackage{titlesec}
+\usepackage{blindtext}
+\usepackage{amsmath}
 
 \title{Quadratic Formula}
 
 \begin{document}
 	\maketitle
+	\tableofcontents
 	
 	\Large
+	
+	\newpage
+	\addcontentsline{toc}{section}{Introduction}
 	\section*{Introduction}
 	When considering functions of the form
 	\[f(x) = ax^2+bx+c\]
@@ -38,7 +45,20 @@
 	\[x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\]
 	-- this is, in its full glory, the famous Quadratic Formula! Memorise it (if you find this difficult, there are some fun YouTube videos with songs, mnemonics and suchlike to help you remember) and understand it --- it forms an integral part of the SAT and is one of the most commonly-used tools in high-school mathematics.
 	
+	
+	\addcontentsline{toc}{section}{The Discriminant}
 	\section*{The Discriminant}
+	As you may have already realised, the Quadratic Formula tells us that a quadratic equation always has two roots. The astute reader may object, however, that, if the square root in the numerator evaluates to $0$, there is really only one root. It should be noted that this is \textit{not} technically the case. In order for certain important theorems to be true, among other reasons, the equation ($f(x)=x^2$, say) is still considered to have two roots --- the only caveat is that those roots are not distinct. Moreover, if the radicand $b^2-4ac$ is negative, there are still two roots; the only different thing here is that those roots have nonzero imaginary parts. For our purposes specifically, however, the SAT (at least, as far as I have seen) only ever asks about \textit{real}, \textit{distinct} roots, but the aforementioned is still important to keep in mind in mathematics in general.
+	
+	We now continue this discussion by examining the radicand $b^2-4ac$, a special quantity which we call the \textit{discriminant} (for reasons which you should hopefully see). This quantity is usually denoted using the Greek capital letter delta:
 	\[\Delta := b^2-4ac\]
-	-- This is to be finished later!
+	As I have said, for the SAT, you should only need to know about the \textit{real}, \textit{distinct} roots, and since the number of these is not guaranteed to be $2$ as it is for roots in general, you should reason through and remember the following:
+	\[
+	\text{Number of real, distinct roots} =
+	\begin{cases}
+		2 \text{ if } \Delta > 0 \\
+		1 \text{ if } \Delta = 0 \\
+		0 \text{ if } \Delta < 0
+	\end{cases}
+	\]
 \end{document}
