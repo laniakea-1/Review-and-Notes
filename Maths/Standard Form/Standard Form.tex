@@ -1,0 +1,41 @@
+\documentclass{article}
+
+\usepackage[margin=2.0cm]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\graphicspath{ {./images/} }
+
+\begin{document}
+	\section*{Standard Form}
+	At this time, the most common form of a linear equation to you is probably the following:
+	\[y=mx+b\]
+	for constants $m$ and $b$. However, you have likely also been exposed to an alternative form:
+	\[Ax + By = C\]
+	for constants, $A, B$ and $C$. If we take $B \neq 0$, it can be easily verified using basic algebra that any set of points satisfying the second equation also satisfies the equation
+	\[y = -\frac{A}{B}x+\frac{C}{B}\]
+	-- in other words, letting $m = -\frac{A}{B}$ and $b = \frac{C}{B}$, such a set of points also satisfies the first equation. Similarly, it may conversely be verified that any set of points satisfying the first equation must also satisfy the second, for appropriate values of $A, B$ and $C$. That is, at least for $B \neq 0$, the two forms are exactly equivalent.
+	
+	This apparently meaningless change in form of linear equations is, in certain cases, quite important, due to the emphasis it places on certain information about the line. The first tells you how steeply the line points upwards, $m$, and the vertical ``offset" of the function, $b$. The second, on the other hand, is a little more abstract, but still easy enough to understand. Rather than phrasing the line as simply a statement of how $y$ is determined by $x$, it places its emphasis instead on the mutual interaction between both $x$ and $y$.
+	
+	Let us take a simple example:
+	\[x+y=0\]
+	along with the particular value $x = 0$. If that is the case, then clearly $y = 0$. Let us now explore our idea by incrementing $x$ by $1$. If we were to do nothing, we would have $x + y = 1 \neq 0$ -- clearly, we have stepped off the line. In order to get back on while keeping $x$ the same, we must counteract our increment of $1$ to $x$ with a decrement of $1$ to $y$; in other words, changing $x$ from $0$ to $1$ forces $y$ to change from $0$ to $-1$. Intuitively, I like to imagine our point $(x, y)$ on the line as a bead sliding on a thin, straight wire: as we pull it to one side or the other, we must necessarily change its height as well. Such is the intuition behind what we as mathematicians call the ``standard form".
+	
+	I now list a few important properties of equations of lines in standard form with which you should familiarise yourself as you prepare to take the SAT. If you have time, you are encouraged to prove each of the following statements as an exercise.
+	
+	Let $A_1, B_1, C_1, A_2, B_2$ and $C_2$ all be real numbers, such that neither $B_1$ nor $B_2$ equals $0$, and let $l_1, l_2$ be the lines described by the equations
+	\[A_1x+B_1y=C_1 \text{ and } A_2x+B_2y=C_2,\]
+	respectively.
+	
+	\begin{enumerate}
+		\item The slopes $m_1$ of $l_1$ and $m_2$ of $l_2$ are the same iff there exists some nonzero real number $\gamma$ such that $A_2 = \gamma A_1$ and $B_2 = \gamma B_1$.
+		\item $l_1 = l_2$ if and only if there exists some nonzero real number $\gamma$ such that $A_2 = \gamma A_1$, $B_2 = \gamma B_1$ and $C_2 = \gamma C_1$.
+	\end{enumerate}
+	
+	In other words, if you just multiply both the $x$ and $y$ terms in a standard-form equation by the same nonozero constant, the resulting equation must have the same slope. However, it does not necessarily represent the same line, since the constant term is unchanged and so only remains ``in the same proportion to" the $x$ and $y$ terms if the ``scaling constant" was $1$.
+	
+	\subsection*{Particular Relevance to the SAT}
+	When applying these concepts to the SAT, it is particularly important to recognise their implications for the solutions to systems of linear equations. Let us take the particular case where we have $2$ linear equations. Based on our preexisting knowledge, we can say that two equations in standard form represent the same line if and only if the equation of one equals the equation of the other, ``multiplied" by some nonzero constant. In this case, of course, we have infinitely many solutions. If the $A_{1,2}$ and $B_{1,2}$ terms have the same proportionality in the manner discussed above, but the constants $C_{1,2}$ do not, then the lines never cross and the system has no solution. If the $A_{1,2}$ and $B_{1,2}$ terms to not have the same proportionality, then the slope of the two equations must be different, and so there must be exactly one solution.
+\end{document}
